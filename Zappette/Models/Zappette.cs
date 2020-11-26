@@ -25,5 +25,11 @@ namespace ScanningTool.Models
             Console.WriteLine("Stock +1: " + product.Name);
             entrepot.AddItemAsync(product.Id);
         }
+        public void RemoveProduct(EntrepotService.Product product)
+        {
+            //appel méthode addProduct du ms BDD
+            Console.WriteLine("Stock -1: " + product.Name);
+            entrepot.RemoveItemAsync(product.Id);
+        }
     }
 }
